@@ -1,2 +1,2 @@
-# Discurso para presentar la solucion
+# Discurso para presentar la solución
 
