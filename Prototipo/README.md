@@ -31,3 +31,29 @@ Notificaciones push móviles, correo electrónico, SMS y mensajería de publicac
 * AWS Comprehend :
 Amazon Comprehend utiliza el aprendizaje automático para ayudarle a descubrir la información y las relaciones en sus datos no estructurados. El servicio identifica el idioma del texto; extrae frases, nombres de lugares, personas, marcas o eventos clave; comprende el grado de positividad o negatividad del texto; analiza el texto mediante tokenización y categorías gramaticales; y organiza automáticamente una colección de archivos de texto por tema. También puede utilizar las funciones de AutoML en Amazon Comprehend para crear un conjunto personalizado de entidades o modelos de clasificación de texto que se adapten de forma exclusiva a las necesidades de su organización.
 [AWS Comprehend](https://aws.amazon.com/es/comprehend/)
+
+Referencias :
+
+* [Como activar un código promocional](https://aws.amazon.com/es/premiumsupport/knowledge-center/add-aws-promotional-code/)
+
+* [Entrenamientos y certificaciones](https://www.aws.training/LearningLibrary?filters=language%3A7&tab=view_all)
+
+* [Crear una transcripción de audio](https://aws.amazon.com/es/getting-started/hands-on/create-audio-transcript-transcribe/)
+
+* [Analizar opiniones en el texto](https://aws.amazon.com/es/getting-started/hands-on/analyze-sentiment-comprehend/)
+
+* [Getting started with AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/getting-started.html)
+
+* [Getting started with Amazon Simple Storage Service](https://docs.aws.amazon.com/AmazonS3/latest/gsg/GetStartedWithS3.html)
+
+* [Amazon Transcribe – Accurate Speech To Text At Scale](https://aws.amazon.com/es/blogs/aws/amazon-transcribe-scalable-and-accurate-automatic-speech-recognition/)
+
+* [Converting call center recordings into useful data for analytics](https://aws.amazon.com/es/blogs/compute/converting-call-center-recordings-into-useful-data-for-analytics/)
+
+* [Using AWS Lambda and Amazon Comprehend for sentiment analysis](https://aws.amazon.com/es/blogs/compute/using-aws-lambda-and-amazon-comprehend-for-sentiment-analysis/)
+
+* [Using AWS Lambda and Amazon Comprehend for sentiment analysis](https://aws.amazon.com/es/blogs/compute/using-aws-lambda-and-amazon-comprehend-for-sentiment-analysis/)
+
+* [Analyzing contact center calls—Part 1: Use Amazon Transcribe and Amazon Comprehend to analyze customer sentiment](https://aws.amazon.com/es/blogs/machine-learning/analyzing-contact-center-calls-part-1-use-amazon-transcribe-and-amazon-comprehend-to-analyze-customer-sentiment/)
+
+* [Use AWS Machine Learning to Analyze Customer Calls from Contact Centers (Part 2): Automate, Deploy, and Visualize Analytics using Amazon Transcribe, Amazon Comprehend, AWS CloudFormation, and Amazon QuickSight](https://aws.amazon.com/es/blogs/machine-learning/use-aws-machine-learning-to-analyze-customer-calls-from-contact-centers-part-2-automate-deploy-and-visualize-analytics-using-amazon-transcribe-amazon-comprehend-aws-cloudformation-and-amazon-q/)
