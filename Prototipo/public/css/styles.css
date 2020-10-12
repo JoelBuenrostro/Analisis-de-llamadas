@@ -1,0 +1,44 @@
+
+.b3{
+    background-color:#37517e
+}
+
+.h{
+    height: 60px;
+}
+
+.df{
+    display: flex;
+    align-items: center;
+}
+
+.h2{
+    height: 30px;
+}
+
+.anim{
+    animation-name: movimiento;
+    animation-duration: 10s;
+}
+
+@keyframes movimiento{
+    from{
+        background-position: bottom;
+
+    }
+    to{
+        background-position: top right;
+    }
+}
+
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 16/9 ratio */
+    padding-top: 30px; /* IE6 workaround*/
+    height: 0;
+    overflow: hidden;
+    }
+
+.h600{
+height: 600px;
+align-items: center}
