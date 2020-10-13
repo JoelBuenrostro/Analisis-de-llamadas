@@ -8,6 +8,10 @@ Prototipo de solución para el reto BBVA Open Innovation
 
 ## Documentación para AWS
 
+* Python Software development kit :
+Comience a utilizar AWS de forma rápida con boto3, el AWS SDK para Python. Boto3 facilita la integración de su aplicación, biblioteca o script de Python con los servicios de AWS, incluidos Amazon S3, Amazon EC2, Amazon DynamoDB y más.
+[Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html)
+
 * AWS Elastic Beanstalk :
 AWS Elastic Beanstalk es un servicio fácil de utilizar para implementar y escalar servicios y aplicaciones web desarrollados con Java, .NET, PHP, Node.js, Python, Ruby, Go y Docker en servidores familiares como Apache, Nginx, Passenger e IIS.
 [AWS Elastic Beanstalk](https://aws.amazon.com/es/elasticbeanstalk/?nc2=type_a)
