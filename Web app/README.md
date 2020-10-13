@@ -18,3 +18,5 @@ Django-prod sera el ambiente con las utilidades ya probadas y con despliegue en 
 10. Si todo ha salido bien, la consola mostrara la dirección http donde se esta ejecutando la aplicación local de Django, ir a esa dirección desde el navegador.
 
 Ahora ya esta configurado Django de manera local para pruebas, para cerrar el server ctrl+c y para activarlo de nuevo para visualizar modificaciones repetir solamente el paso 9
+
+Para desactivar el ambiente virtual de Python ejecutar en la linea de comandos 'deactivate' y para volver a usarlo repetir el paso 6.
