@@ -1,48 +1,130 @@
-#navbar{
-    background-color: #1e53bd;
-    /* #0659bf*/
+body {
+  margin: 0px;
+  overflow-x: hidden;
+  background-color: #eee;
 }
 
-.b3{
-    background-color:#37517e
+
+.c1 {
+  background-color: #072146;
 }
 
-.h{
-    height: 60px;
+.c2 {
+  background-color: #c50044;
 }
 
-.df{
-    display: flex;
+.h {
+  height: 75px;
+}
+
+.df {
+  display: flex;
+  align-items: center;
+}
+
+.h2 {
+  height: 35px;
+}
+
+.anim {
+  animation-name: movimiento;
+  animation-duration: 10s;
+}
+
+@keyframes movimiento {
+  from {
+    background-position: bottom;
+
+  }
+
+  to {
+    background-position: top right;
+  }
+}
+
+.h600 {
+  height: 453px;
+  align-items: center;
+  width: 750px;
+  background-color: white;
+  border-radius: 39px;
+  margin-top: 17px;
+  margin-bottom: 7px;
+}
+
+
+.tarjeta_subir_audios {
+  max-height: 600px;
+  align-items: center;
+  width: 80%;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 17px;
+  margin-bottom: 7px;
+}
+
+.tarjeta_subir_audios * {
+  font-family: BentonSansBBVA-Light, Helvetica, Arial, sans-serif;
+  margin: 10px;
+}
+
+.list-of-audios * {
+  margin: 0px;
+}
+
+/*font size*/
+
+.font {
+  color: #121212;
+  font-family: BentonSansBBVA-Light, Helvetica, Arial, sans-serif;
+}
+
+@media (min-width:768px) and (max-width:2000px) {
+  .sizevideo {
+    height: 315px;
+    width: 600px;
+  }
+}
+
+
+@media (min-width:280px) and (max-width:576px) {
+  .h600 {
+    height: 453px;
     align-items: center;
+    width: 300px;
+    background-color: white;
+    border-radius: 39px;
+    margin-top: 17px;
+    margin-bottom: 7px;
+  }
+
+  .sizevideo {
+    height: 315px;
+    width: 280px;
+  }
 }
 
-.h2{
-    height: 30px;
+.h101 {
+  height: 101px;
 }
 
-.anim{
-    animation-name: movimiento;
-    animation-duration: 10s;
+.m1 {
+  margin-left: 19px;
+  margin-top: 10px;
 }
 
-@keyframes movimiento{
-    from{
-        background-position: bottom;
-
-    }
-    to{
-        background-position: top right;
-    }
+.m2 {
+  margin-right: 19px;
 }
 
-.video-responsive {
-    position: relative;
-    padding-bottom: 56.25%; /* 16/9 ratio */
-    padding-top: 30px; /* IE6 workaround*/
-    height: 0;
-    overflow: hidden;
-    }
+.ml4 {
+  margin-left: 4px;
+}
 
-.h600{
-height: 600px;
-align-items: center}
+.preview {
+  background-color: #f1f1f1;
+  overflow-y: scroll;
+  min-height: 0;
+  max-height: 400px;
+  width: 90%;
+}
