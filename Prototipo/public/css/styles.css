@@ -14,7 +14,7 @@ body{
 }
 
 .h{
-    height: 60px;
+    height: 75px;
 }
 
 .df{
@@ -23,7 +23,7 @@ body{
 }
 
 .h2{
-    height: 30px;
+    height: 35px;
 }
 
 .anim{
@@ -82,4 +82,19 @@ font-family: BentonSansBBVA-Light,Helvetica,Arial,sans-serif;
         }
 }
 
+.h101{
+    height: 101px;
+}
 
+.m1{
+    margin-left: 19px;
+    margin-top: 10px;
+}
+
+.m2{
+    margin-right: 19px;
+}
+
+.ml4{
+    margin-left: 4px;
+}
