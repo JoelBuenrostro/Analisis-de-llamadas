@@ -54,7 +54,7 @@ body {
 
 
 .tarjeta_subir_audios {
-  height: 600px;
+  max-height: 600px;
   align-items: center;
   width: 80%;
   background-color: white;
@@ -64,9 +64,13 @@ body {
 }
 
 .tarjeta_subir_audios * {
+  font-family: BentonSansBBVA-Light, Helvetica, Arial, sans-serif;
   margin: 10px;
 }
 
+.list-of-audios * {
+  margin: 0px;
+}
 
 /*font size*/
 
@@ -120,6 +124,7 @@ body {
 .preview {
   background-color: #f1f1f1;
   overflow-y: scroll;
-  height: 400px;
+  min-height: 0;
+  max-height: 400px;
   width: 90%;
 }

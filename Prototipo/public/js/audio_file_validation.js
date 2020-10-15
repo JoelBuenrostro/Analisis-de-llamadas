@@ -14,14 +14,17 @@ function updateImageDisplay() {
   const curFiles = audio_file_input.files;
   if (curFiles.length === 0) {
     const para = document.createElement('p');
-    para.textContent = 'No files currently selected for upload';
+    para.textContent = 'No has seleccionado ningún archivo';
     preview.appendChild(para);
   } else {
     const list = document.createElement('ol');
+    list.classList.add("list-group");
+    list.classList.add("list-of-audios");
     preview.appendChild(list);
 
     for (const file of curFiles) {
       const listItem = document.createElement('li');
+      listItem.classList.add("list-group-item");
       const para = document.createElement('p');
       if (validFileType(file)) {
         para.textContent = `${file.name}, ${returnFileSize(file.size)}.`;
