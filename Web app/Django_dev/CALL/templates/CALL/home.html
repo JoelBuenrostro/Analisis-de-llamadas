@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 <head>
@@ -6,13 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link rel="stylesheet" href="..\static\CALL\css\styles.css">
+  <link rel="stylesheet" href="{% static 'CALL/css/styles.css' %}">
   <title>CALL</title>
 </head>
 
 <body>
   <nav id="navbar" class="navbar navbar-expand-md navbar-dark shadow">
-    <a class="navbar-brand" href="#"><img src="..\static\CALL\img\bbva.png" class="h2" alt=""></a>
+    <a class="navbar-brand" href="#"><img src="{% static 'CALL/img/bbva.png' %}" class="h2" alt=""></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -36,7 +37,7 @@
           <h2>Call Analysis Linguistic Lab</h2>
         </div>
         <div class="col-lg-6 order-1 order-lg-2">
-          <img src="..\static\CALL\img\bg_main.png" class="img-fluid anim" alt="">
+          <img src="{% static 'CALL/img/bg_main.png' %}" class="img-fluid anim" alt="">
         </div>
       </div>
     </div>
