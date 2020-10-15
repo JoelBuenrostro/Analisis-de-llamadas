@@ -1,48 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="../public/css/styles.css">
-    <link rel="shortcut icon" href="../public/img/logo3.ico" type="image/x-icon">
-    <title>Aplicación</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="../public/css/styles.css">
+  <link rel="stylesheet" href="../public/css/styles_input.css">
+  <link rel="shortcut icon" href="../public/img/logo3.ico" type="image/x-icon">
+  <script src="https://use.fontawesome.com/e74f6e6785.js"></script>
+  <title>Aplicación</title>
 </head>
+
 <body>
-    <header id="header" class="c1">
-        <div class="container-flex">
-            <div class="row justify-content-between h101">
-                <div class="col-4">
-                  <img src="../public/img/logoblanco2-1.png" class="h m1" alt="">
-                </div>
-                <div class="col-4 justify-content-end df">
-                  <img src="../public/img/bbva.png" class="h2 m2" alt="">
-                </div>
-              </div>
-      </header><!-- End Header -->
-    <section  class="d-flex align-items-center c2">
-        <div class="container-flex">
-            <div class="row">
-              <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1">
-                <h1 class="font ml4">CALL </h1>
-                <p class="font text-justify ml4">CALL que sus siglas en ingles es (Call Analysis Linguistic Lab) y en español (Laboratorio lingüístico de análisis de llamadas),el proposisto es analizar las llamadas que recibe el banco BBVA para poder saber el motivo de estas mismas,ya que realizar esta operacion manualmente es muy complejo porque contidianamente son gran volumen que se tienen.</p>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2">
-                <img src="../public/img/hero-img.png" class="img-fluid anim" alt="">
-              </div>
-            </div>
-          </div>
-    </section><!-- termina section de inicio de la aplicacion-->
-    <section class="d-flex align-items-center justify-content-center">
-        <div class="container-flex justify-content-center">
-            <div class="col-lg-12 d-flex flex-column justify-content-center h600">
-                <iframe class="sizevideo" src="https://www.youtube.com/embed/mkggXE5e2yk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+  <header id="header" class="c1">
+    <div class="container-flex">
+      <div class="row justify-content-between h101">
+        <div class="col-4">
+          <img src="../public/img/logoblanco2-1.png" class="h m1" alt="">
         </div>
-    </section>
+        <div class="col-4 justify-content-end df">
+          <img src="../public/img/bbva.png" class="h2 m2" alt="">
+        </div>
+      </div>
+  </header><!-- End Header -->
+  <section class="d-flex align-items-center c2">
+    <div class="container-flex">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1">
+          <h1 class="font ml4">CALL </h1>
+          <p class="font text-justify ml4">CALL que sus siglas en ingles es (Call Analysis Linguistic Lab) y en español (Laboratorio lingüístico de análisis de llamadas),el proposisto es analizar las llamadas que recibe el banco BBVA para poder saber el motivo de estas mismas,ya que realizar esta operacion manualmente es muy complejo porque contidianamente son gran volumen que se tienen.</p>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2">
+          <img src="../public/img/hero-img.png" class="img-fluid anim" alt="">
+        </div>
+      </div>
+    </div>
+  </section><!-- termina section de inicio de la aplicacion-->
+  <section class="d-flex align-items-center justify-content-center">
+    <div class="container-flex justify-content-center">
+      <div class="col-lg-12 d-flex flex-column justify-content-center h600">
+        <iframe class="sizevideo" src="https://www.youtube.com/embed/mkggXE5e2yk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+  <section class="d-flex flex-column bd-highlight mb-3 align-items-center">
+    <div class="d-flex flex-column bd-highlight mb-3 align-items-center tarjeta_subir_audios">
+      <input type="file" id="audio-input" accept="audio/wav" , style="display:none" multiple>
+      <div class="">
+        <button onclick="document.getElementById('audio-input').click();" class="btn btn-primary">
+          <i style="font-size: 50px" class="fa fa-upload" aria-hidden="true"></i><br>
+          SUBIR <br>
+          Sube uno o más audios (.wav)
+        </button>
+      </div>
+      <div class="preview">
+      </div>
+      <div class=""><button class="btn btn-primary" id="bsubir-audio" type="submit">Empieza a hallar los motivos</button></div>
+      <div class="">
+        <p class="status" id="status">Esperando por audios...</p>
+      </div>
+    </div>
+  </section><!-- section de ingreso de audios de la aplicacion-->
 </body>
+<script src="../public/js/audio_file_validation.js"></script>
+<script src="../public/js/main.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
+
 </html>
