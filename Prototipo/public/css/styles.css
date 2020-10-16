@@ -98,3 +98,9 @@ font-family: BentonSansBBVA-Light,Helvetica,Arial,sans-serif;
 .ml4{
     margin-left: 4px;
 }
+
+.containerfile{
+    height: 300px;
+    background-color: bisque;
+    overflow-y: scroll;
+}
