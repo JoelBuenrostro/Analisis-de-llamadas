@@ -128,3 +128,8 @@ body {
   max-height: 400px;
   width: 90%;
 }
+
+.description-title,
+.description {
+  color: white;
+}
