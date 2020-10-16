@@ -3,7 +3,7 @@
 ## Integrantes
 
 * Elizabeth Rodríguez Sánchez
-* Brisa Tovar
+* Brisa Tovar Hernandez
 * Elizabeth Rodríguez
 * Jesus Joel Buenrostro Jimenez
 * Luis Germán Esquivel Grados
