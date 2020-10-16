@@ -9,9 +9,10 @@ s3 = boto3.resource('s3')
 def home(request):
 
     if request.method == 'POST':
-        print(request.FILES['file'])
-        file_name = 'calls/' + str(request.FILES['file'])
-        s3.Bucket('django-call-storage').put_object(Key=file_name, Body=request.FILES['file'])
+        files = request.FILES.getlist('files')
+        for file in files:
+            file_name = 'calls/' + str(file)
+            s3.Bucket('django-call-storage').put_object(Key=file_name, Body=file)
 
     return render(request, 'CALL/home.html')
 
