@@ -1,9 +1,9 @@
 # Datos técnicos
-Tradicionalmente la conversion de contenido de audio a texto ha requerido a mucha intervención humana. Alguien tiene que reproducir la grabación, capturar y revisar para después editar el contenido. Es aquí donde nuestra propuesta entra para brindar una solución en este reto.
+Tradicionalmente la conversion de contenido de audio a texto ha requerido de mucha intervención humana. Alguien tiene que reproducir la grabación, capturar y revisar para después editar el contenido. Es aquí donde nuestra propuesta entra para brindar una solución en este reto. Les presentamos CALL (Call Analysis Linguistic Lab)
 
 ## Arquitectura
 ### Arquitectura en la nube de AWS
-CALL aprovecha los modelos de Deep Learning de AWS Transcribe combinando con las herramientas de análisis y búsqueda de indices altamente escalables para obtener valor en el contenido de audio.
+CALL aprovecha los modelos de Deep Learning de AWS Transcribe y AWS Comprehend  para encontrar relaciones en el texto combinando con las herramientas de análisis y búsqueda de indices altamente escalables para obtener valor en el contenido de audio.
 CALL > S3 > AWS Transcribe > AWS Comprehend > AWS Athena > Quicksight
 
 
@@ -17,7 +17,7 @@ Virtualenv es una herramienta para crear ambientes aislados de Python para el co
 ### awscli
 La interfaz de línea de comandos (CLI) es una herramienta unificada para administrar los productos de AWS. awscli es un programa shell de línea de comando que ofrece cómodas características de productividad para ayudar a usuarios nuevos y avanzados de la interfaz de línea de comando de AWS.
 ### Boto3
-Boto3 es el kit de desarrollo para AWS hecho para Python. Habilita a los desarrolladores la creación, configuración y administración de los servicios de AWS. Boto3 provee de una API fácil de usar asi mismo como un accesos de bajo nivel a los servicios AWS
+Boto3 es el kit de desarrollo para AWS hecho para Python. Habilita a los desarrolladores la creación, configuración y administración de los servicios de AWS. Boto3 provee de una API fácil de usar asi como un acceso de bajo nivel a los servicios AWS
 
 ## Frameworks
 ### Django 
