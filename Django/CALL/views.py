@@ -1,4 +1,5 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponseRedirect
+from django.contrib import messages
 import boto3
 
 # Cada funcion es una vista de la aplicacion web
@@ -10,9 +11,13 @@ def home(request):
 
     if request.method == 'POST':
         files = request.FILES.getlist('files')
+        files_name = list(map(str, files))
+        print(files_name)
         for file in files:
             file_name = 'calls/' + str(file)
-            s3.Bucket('django-call-storage').put_object(Key=file_name, Body=file)
+            messages.success(request, "Se han subido tus archivos")
+            return render(request, 'CALL/home.html', {'names': files_name})
+            # s3.Bucket('django-call-storage').put_object(Key=file_name, Body=file)
 
     return render(request, 'CALL/home.html')
 
