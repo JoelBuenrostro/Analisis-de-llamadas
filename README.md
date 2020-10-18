@@ -42,7 +42,7 @@ Django-prod sera el ambiente con las utilidades ya probadas y con despliegue en 
 6. Activar el ambiente virtual desde la linea de comando, para esto se debe posicionar en la carpeta Scripts y ejecutar el comando 'activate' si ha funcionado, aparecerá (venv) en la ruta de la consola
 7. Posicionarse en la raíz de la carpeta Web app nuevamente
 8. Instalar Django 2.1.1 con 'pip install django==2.1.1' desde cmd, esta es la version soportada por EB
-9. Una vez instalado, entrar a la primer carpeta Django_dev desde la linea de comandos, ahi se encuentra Otra carpeta con el mismo nombre y un archivo manage.py, ejecutar el comando 'manage.py runserver'
+9. Una vez instalado, entrar a la primer carpeta Django desde la linea de comandos, ahi se encuentra Otra carpeta con el mismo nombre y un archivo manage.py, ejecutar el comando 'manage.py runserver'
 10. Si todo ha salido bien, la consola mostrara la dirección http donde se esta ejecutando la aplicación local de Django, ir a esa dirección desde el navegador.
 
 Ahora ya esta configurado Django de manera local para pruebas, para cerrar el server ctrl+c y para activarlo de nuevo para visualizar modificaciones repetir solamente el paso 9
