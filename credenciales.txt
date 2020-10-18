@@ -1,2 +1,0 @@
-User name,Password,Access key ID,Secret access key,Console login link
-Mike,f%D{2|0gcoY*,AKIAWRXWT36EOEW6HZET,DV7KpMVfilsoZu7Gipv/8vYPtQImuzL3xAIzLHid,https://450415026056.signin.aws.amazon.com/console
