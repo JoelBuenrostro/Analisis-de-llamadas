@@ -180,3 +180,59 @@
 <p></p>
 </div>
 {% endblock %}
+=======
+{% extends 'CALL/base.html' %}
+{% load static %}
+{% block body %}
+<section class="d-flex align-items-center c2">
+  <div class="container-flex">
+    <div class="row">
+      <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+        style="background: #043263;">
+        <h1 class="font ml4 description-title p-3">CALL </h1>
+        <p class="font text-justify ml4 description p-3">CALL (Call Analysis Linguistic Lab), o dicho en español
+          (Laboratorio lingüístico de análisis de llamadas), tiene como propósito automatizar el proceso de obtener los
+          motivos de las llamadas que recibe el banco BBVA por parte de sus clientes. Esto se consigue haciendo uso de
+          herramientas provistas por AWS, tales como Amazon Transcribe (transcripción de audio a texto), Amazon
+          Comprehend (Identificación de patrones en textos), entre otras. Para comenzar, solo sube tus archivos de audio
+          y la herramienta hará el resto!</p>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2">
+        <img src="{% static 'CALL/img/hero-img.png' %}" class="img-fluid anim" alt="">
+      </div>
+    </div>
+  </div>
+</section><!-- termina section de inicio de la aplicacion-->
+<section class="d-flex align-items-center justify-content-center">
+  <div class="container-flex justify-content-center">
+    <div class="col-lg-12 d-flex flex-column justify-content-center h600">
+      <h1>¿Cómo usar?</h1>
+      <iframe class="sizevideo" src="https://www.youtube.com/embed/mkggXE5e2yk" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+<section class="d-flex flex-column bd-highlight mb-3 align-items-center">
+  <div class="d-flex flex-column bd-highlight mb-3 align-items-center tarjeta_subir_audios">
+    <div class="">
+      <button onclick="document.getElementById('audio-input').click();" class="btn btn-primary">
+        <i style="font-size: 50px" class="fa fa-upload" aria-hidden="true"></i><br>
+        SUBIR <br>
+        Sube uno o más audios (.wav)
+      </button>
+    </div>
+    <form class="d-flex flex-column bd-highlight mb-3 align-items-center tarjeta_subir_audios"
+      enctype="multipart/form-data" method="post" action="">
+      {% csrf_token %}
+      <input type="file" id="audio-input" accept="audio/wav" style="display: none;" multiple name="files">
+      <div class="preview">
+        <p>Tus archivos de audio se mostrarán aquí</p>
+      </div>
+      <div class="">
+        <button class="btn btn-primary" id="bsubir-audio" type="submit">Empieza a hallar los motivos</button>
+      </div>
+    </form>
+  </div>
+</section><!-- section de ingreso de audios de la aplicacion-->
+{% endblock %}
