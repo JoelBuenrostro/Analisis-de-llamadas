@@ -1,48 +1,101 @@
-{% extends 'CALL/base.html' %}
-{% load static %}
-{% block body %}
-<section class="d-flex align-items-center c2">
+{% extends 'CALL/base.html' %} {% load static %} {% block body %}
+<section class="d-flex align-items-center">
   <div class="container-flex">
     <div class="row">
-      <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" style="background: #043263;">
-        <h1 class="font ml4 description-title p-3">CALL </h1>
-        <p class="font text-justify ml4 description p-3">CALL (Call Analysis Linguistic Lab), o dicho en español (Laboratorio lingüístico de análisis de llamadas), tiene como propósito automatizar el proceso de obtener los motivos de las llamadas que recibe el banco BBVA por parte de sus clientes. Esto se consigue haciendo uso de herramientas provistas por AWS, tales como Amazon Transcribe (transcripción de audio a texto), Amazon Comprehend (Identificación de patrones en textos), entre otras. Para comenzar, solo sube tus archivos de audio y la herramienta hará el resto!</p>
+      <div class="anim">
+        <img
+          src="{% static 'CALL/img/ghGirl2.jpg' %}"
+          class="img-fluid guyImage"
+          alt=""
+        />
+        <div class="centeredText">Call Analysis Linguistic Lab</div>
       </div>
-      <div class="col-lg-6 order-1 order-lg-2 anim">
-        <img src="{% static 'CALL/img/hero-img.png' %}" class="img-fluid" alt="">
+    </div>
+    <div class="row c2">
+      <div class="col-2 order-1 d-flex flex-column justify-content-center">
+        <img
+          src="{% static 'CALL/img/Private_data.svg' %}"
+          class="img-fluid dataGirlImage"
+          alt=""
+        />
+      </div>
+      <div
+        class="col-10 order-2 d-flex flex-column justify-content-center pt-4 pt-lg-0"
+      >
+        <h3>Call Analysis Linguistic Lab</h3>
+        <p class="font text-justify">
+          O dicho en español (Laboratorio lingüístico de análisis de llamadas),
+          tiene como propósito automatizar el proceso de saber ¿Por qué los
+          clientes llaman a BBVA?. Esto se consigue haciendo uso de herramientas
+          provistas por AWS, tales como Amazon Transcribe (transcripción de
+          audio a texto), Amazon Comprehend (Identificación de patrones en
+          textos), entre otras. Para comenzar, solo sube tus archivos de audio y
+          la herramienta hará el resto!
+        </p>
       </div>
     </div>
   </div>
-</section><!-- termina section de inicio de la aplicacion-->
-<section class="d-flex align-items-center justify-content-center">
+</section>
+<!-- termina section de inicio de la aplicacion-->
+
+<section class="d-flex align-items-center justify-content-center c3">
   <div class="container-flex justify-content-center">
+    <h3 class="d-flex align-items-start flex-column headerUso">¿Cómo usar?</h3>
     <div class="col-lg-12 d-flex flex-column justify-content-center h600">
-      <h1 class="font fontsize28">¿Cómo usar?</h1>
-      <iframe class="sizevideo" src="https://www.youtube.com/embed/mkggXE5e2yk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe
+        class="sizevideo"
+        src="https://www.youtube.com/embed/mkggXE5e2yk"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
     </div>
   </div>
 </section>
 <section class="d-flex flex-column bd-highlight mb-3 align-items-center">
-  <div class="d-flex flex-column bd-highlight mb-3 align-items-center tarjeta_subir_audios">
+  <div
+    class="d-flex flex-column bd-highlight mb-3 align-items-center tarjeta_subir_audios"
+  >
     <div class="">
-      <button onclick="document.getElementById('audio-input').click();" class="btn btn-primary">
-        <i style="font-size: 50px" class="fa fa-upload" aria-hidden="true"></i><br>
-        SUBIR <br>
+      <button
+        onclick="document.getElementById('audio-input').click();"
+        class="btn btn-primary uploadButton"
+      >
+        <i style="font-size: 25px" class="fa fa-upload" aria-hidden="true"></i>
         Sube uno o más audios (.wav)
       </button>
     </div>
-    <form class="d-flex flex-column bd-highlight mb-3 align-items-center tarjeta_subir_audios" enctype="multipart/form-data" method="post" action="">
+    <form
+      class="d-flex flex-column bd-highlight mb-3 align-items-center tarjeta_subir_audios"
+      enctype="multipart/form-data"
+      method="post"
+      action=""
+    >
       {% csrf_token %}
-      <input type="file" id="audio-input" accept="audio/wav" style="display: none;" multiple name="files">
+      <input
+        type="file"
+        id="audio-input"
+        accept="audio/wav"
+        style="display: none"
+        multiple
+        name="files"
+      />
       <div class="preview">
         <p>Tus archivos de audio se mostrarán aquí</p>
       </div>
       <div class="">
-        <button class="btn btn-primary" id="bsubir-audio" type="submit">Empieza a hallar los motivos</button>
+        <button
+          class="btn btn-success analyzeButton"
+          id="bsubir-audio"
+          type="submit"
+        >
+          Comenzar Análisis
+        </button>
       </div>
     </form>
   </div>
-</section><!-- section de ingreso de audios de la aplicacion-->
+</section>
+<!-- section de ingreso de audios de la aplicacion-->
 <section>
   <div class="d-flex justify-content-center mb-3">
     <div class="row col-lg-10 d-flex flex-column align-items-center fondo">
@@ -54,46 +107,61 @@
       <div class="row col-lg-12 d-flex justify-content-center">
         <div class="col-lg-12 containerfile d-flex flex-column">
           <div class="row bordertrl">
-            <div class="col-3 rb d-flex justify-content-center align-items-center">
+            <div
+              class="col-3 rb d-flex justify-content-center align-items-center"
+            >
               <p class="wm">Nombre</p>
             </div>
-            <div class="col-3 rb d-flex justify-content-center align-items-center">
-             <p class="wm">Motivo</p>
+            <div
+              class="col-3 rb d-flex justify-content-center align-items-center"
+            >
+              <p class="wm">Motivo</p>
             </div>
-            <div class="col-3 rb d-flex justify-content-center align-items-center">
+            <div
+              class="col-3 rb d-flex justify-content-center align-items-center"
+            >
               <p class="wm">Descargar como pdf</p>
             </div>
             <div class="col-3 d-flex justify-content-center align-items-center">
               <p class="wm">Descargar como csv</p>
-          </div>
-
+            </div>
           </div>
           <div class="row borderr">
             <div class="col-3 d-flex align-items-center">
-              <p class="wm f11 font hidetext">Audio2asdkpi230912830182038102389019283091823.wam</p>
+              <p class="wm f11 font hidetext">
+                Audio2asdkpi230912830182038102389019283091823.wam
+              </p>
             </div>
             <div class="col-3 d-flex align-items-center">
               <p class="wm f11 font hidetext">Robo de tarjeta</p>
             </div>
             <div class="col-3 d-flex justify-content-center align-items-center">
-              <button type="button" class="btn btn-warning fbutton">Descargar pdf</button>
+              <button type="button" class="btn btn-warning fbutton">
+                Descargar pdf
+              </button>
             </div>
             <div class="col-3 d-flex justify-content-center align-items-center">
-              <button type="button" class="btn btn-info fbutton">Descargar csv</button>
+              <button type="button" class="btn btn-info fbutton">
+                Descargar csv
+              </button>
             </div>
           </div>
-        
         </div>
       </div>
     </div>
   </div>
-</section><!--Aqui termina la section para poder descargar reportes-->
+</section>
+<!--Aqui termina la section para poder descargar reportes-->
 <section>
-<div class="d-flex justify-content-center mb-3">
-  <div class="row col-lg-10 d-flex justify-content-center fondo">
-    <iframe src="https://www.google.com/" class="sizeweb" title="W3Schools Free Online Web Tutorials">
-    </iframe>
+  <div class="d-flex justify-content-center mb-3">
+    <div class="row col-lg-10 d-flex justify-content-center fondo">
+      <iframe
+        src="https://www.google.com/"
+        class="sizeweb"
+        title="W3Schools Free Online Web Tutorials"
+      >
+      </iframe>
+    </div>
   </div>
-</div>
 </section>
 {% endblock %}
