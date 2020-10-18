@@ -124,3 +124,7 @@ STATIC_URL = '/static/'
 STATIC_DIRS = [
     STATIC_DIR,
 ]
+
+FILE_UPLOAD_HANDLERS = [
+    'django.core.files.uploadhandler.TemporaryFileUploadHandler',
+]
