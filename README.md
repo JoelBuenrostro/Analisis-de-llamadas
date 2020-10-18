@@ -37,7 +37,7 @@ Django-prod sera el ambiente con las utilidades ya probadas y con despliegue en 
 1. Tener una version de Python 3 instalada y configurada
 2. Instalar virtualenv con 'pip install virtualenv'
 3. Hacer un fork o descargar el código del repositorio como zip y descomprimirlo
-4. Con la linea de comandos, ubicarse de dentro de la carpeta 'Web app' esto se puede lograr con el comando cd 'ruta' o cd .. para retroceder
+4. Con la linea de comandos, ubicarse de dentro de la carpeta 'Django' esto se puede lograr con el comando cd 'ruta' o cd .. para retroceder
 5. Crear un ambiente virtual de Python para este proyecto, ejecutar el comando 'virtualenv venv'
 6. Activar el ambiente virtual desde la linea de comando, para esto se debe posicionar en la carpeta Scripts y ejecutar el comando 'activate' si ha funcionado, aparecerá (venv) en la ruta de la consola
 7. Posicionarse en la raíz de la carpeta Web app nuevamente
