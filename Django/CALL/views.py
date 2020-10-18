@@ -23,9 +23,10 @@ def home(request):
             temp = first_3_min.export(format='wav')
             temp.seek(0)
 
-            # s3.Bucket('django-call-storage').put_object(Key=file_name, Body=temp)
+            s3.Bucket('django-call-storage').put_object(Key=file_name, Body=temp)
             messages.success(request, "Se han subido tus archivos")
-            return render(request, 'CALL/home.html', {'names': files_name})
+            
+        return render(request, 'CALL/home.html', {'names': files_name})
 
 
     return render(request, 'CALL/home.html')
