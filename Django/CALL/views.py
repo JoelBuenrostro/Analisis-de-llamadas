@@ -1,4 +1,5 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponseRedirect
+from django.contrib import messages
 import boto3
 from pydub import AudioSegment
 
@@ -13,16 +14,14 @@ def home(request):
 
     if request.method == 'POST':
         files = request.FILES.getlist('files')
+        files_name = list(map(str, files))
+        print(files_name)
         for file in files:
+            file_name = 'calls/' + str(file)
+            messages.success(request, "Se han subido tus archivos")
+            return render(request, 'CALL/home.html', {'names': files_name})
+            # s3.Bucket('django-call-storage').put_object(Key=file_name, Body=file)
 
-            sound = AudioSegment.from_file(file.file.name)
-            first_3_min = sound[:time]
-            # create a new file "first_half.mp3":
-            file_name = 'calls/' + str(file).replace(" ", "")
-            temp = first_3_min.export(format='wav')
-            temp.seek(0)
-
-            s3.Bucket('django-call-storage').put_object(Key=file_name, Body=temp)
 
     return render(request, 'CALL/home.html')
 

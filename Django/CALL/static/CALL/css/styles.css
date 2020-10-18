@@ -1,16 +1,77 @@
 body {
   margin: 0px;
   overflow-x: hidden;
-  background-color: #eee;
+  background-color: #fff;
+  font-family: "Libre Franklin", sans-serif;
 }
 
-
-.c1 {
+/*Header*/
+.blueHeader {
   background-color: #072146;
+  min-height: 88px;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.boxLogo {
+  padding: 0px 20px;
+  margin: 0 8%;
+}
+
+.logoBBVA {
+  width: 133px;
+  height: auto;
+}
+
+.logoCALL {
+  max-height: 88px;
+  padding: 10px 15px;
+}
+
+/* first box*/
+.guyImage {
+  min-width: 100%;
+  height: auto;
+}
+
+.centeredText {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  color: white;
+  font-size: 4vw;
+  font-weight: bold;
 }
 
 .c2 {
-  background-color: #c50044;
+  background-color: #d4edfc;
+  margin: 10% 8%;
+  color: black;
+  font-size: 1vw;
+  padding: 3% 8%;
+}
+
+.dataGirlImage {
+  width: 100%;
+}
+
+/*Sección de video*/
+.c3 {
+  color: white;
+  background-color: #072146;
+  width: 100%;
+  margin: 0% 0% 15% 0%;
+}
+
+
+.uploadButton{
+  border-radius: 0%;
+  background-color: #028484;
+}
+
+.analyzeButton{
+  border-radius: 0%;
+  background-color: #48AE64;
 }
 
 .h {
@@ -27,18 +88,34 @@ body {
 }
 
 .anim {
-  animation-name: movimiento;
-  animation-duration: 10s;
+  animation-name: rebotes;
+  animation: rebotes 4s infinite;
 }
 
-@keyframes movimiento {
-  from {
-    background-position: bottom;
+.headerUso {
+  margin: 10% 0% 0% 0%;
+}
 
+@keyframes rebotes {
+  0% {
+    left: 0px;
+    top: 0px;
   }
-
-  to {
-    background-position: top right;
+  25% {
+    bottom: 20px;
+    top: 0px;
+  }
+  50% {
+    bottom: 20px;
+    top: 20px;
+  }
+  75% {
+    bottom: 0px;
+    top: 20px;
+  }
+  100% {
+    bottom: 0px;
+    top: 0px;
   }
 }
 
@@ -46,17 +123,16 @@ body {
   height: 453px;
   align-items: center;
   width: 750px;
-  background-color: white;
+  background-color: #072146;
   border-radius: 39px;
   margin-top: 17px;
   margin-bottom: 7px;
 }
 
-
 .tarjeta_subir_audios {
   max-height: 600px;
   align-items: center;
-  width: 80%;
+  width: 83%;
   background-color: white;
   border-radius: 10px;
   margin-top: 17px;
@@ -79,15 +155,14 @@ body {
   font-family: BentonSansBBVA-Light, Helvetica, Arial, sans-serif;
 }
 
-@media (min-width:768px) and (max-width:2000px) {
+@media (min-width: 768px) and (max-width: 2000px) {
   .sizevideo {
     height: 315px;
     width: 600px;
   }
 }
 
-
-@media (min-width:280px) and (max-width:576px) {
+@media (min-width: 280px) and (max-width: 576px) {
   .h600 {
     height: 453px;
     align-items: center;
@@ -121,6 +196,11 @@ body {
   margin-left: 4px;
 }
 
+.containerfile {
+  height: 300px;
+  overflow-y: scroll;
+}
+
 .preview {
   background-color: #f1f1f1;
   overflow-y: scroll;
@@ -132,4 +212,63 @@ body {
 .description-title,
 .description {
   color: white;
+}
+
+.stylestit {
+  border: 3px solid #e1e4e8;
+  border-radius: 4px;
+}
+
+.br {
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+}
+
+.rb {
+  border-right: 1px solid #e1e4e8;
+}
+
+.wm {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.borderr {
+  border: 1px solid #e1e4e8;
+  height: 40px;
+}
+
+.fbutton {
+  height: 30px !important;
+  font-size: 11px;
+}
+
+.bordertrl {
+  border-top: 1px solid #e1e4e8;
+  border-right: 1px solid #e1e4e8;
+  border-left: 1px solid #e1e4e8;
+}
+
+.fondo {
+  background-color: white;
+  border-radius: 10px;
+}
+
+.f11 {
+  font-size: 11px;
+}
+
+.hidetext {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.fontsize28 {
+  font-size: 28px;
+}
+
+.sizeweb {
+  height: 800px;
+  width: 1083px;
 }

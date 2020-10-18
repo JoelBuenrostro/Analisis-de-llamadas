@@ -16,8 +16,11 @@ $(document).ready(function(){
                         console.log('Bytes loaded:' + file.loaded);
                         console.log('Total size: ' + file.total);
                         console.log('Percentage uploaded: ' + (file.loaded / file.total));
-
-                    }
+                        var percentage = 100 * (file.loaded / file.total);
+                        console.log(`${percentage}%`)
+                        document.getElementById('progressBar').style.width = `${percentage}%`;
+                        document.getElementById('progressBar').innerHTML = `${percentage}%`;
+                    };
 
                 });
 
@@ -29,7 +32,6 @@ $(document).ready(function(){
             processData: false,
             contentType: false,
             success: function(){
-                alert('File uploaded');
             }
 
         });
