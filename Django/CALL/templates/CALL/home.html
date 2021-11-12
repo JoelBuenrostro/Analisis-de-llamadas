@@ -3,25 +3,15 @@
   <div class="container-flex">
     <div class="row">
       <div class="anim">
-        <img
-          src="{% static 'CALL/img/ghGirl2.jpg' %}"
-          class="img-fluid guyImage"
-          alt=""
-        />
+        <img src="{% static 'CALL/img/ghGirl2.jpg' %}" class="img-fluid guyImage" alt="" />
         <div class="centeredText">Call Analysis Linguistic Lab</div>
       </div>
     </div>
     <div class="row c2">
       <div class="col-2 order-1 d-flex flex-column justify-content-center">
-        <img
-          src="{% static 'CALL/img/Private_data.svg' %}"
-          class="img-fluid dataGirlImage"
-          alt=""
-        />
+        <img src="{% static 'CALL/img/Private_data.svg' %}" class="img-fluid dataGirlImage" alt="" />
       </div>
-      <div
-        class="col-10 order-2 d-flex flex-column justify-content-center pt-4 pt-lg-0"
-      >
+      <div class="col-10 order-2 d-flex flex-column justify-content-center pt-4 pt-lg-0">
         <h3>Call Analysis Linguistic Lab</h3>
         <p class="font text-justify">
           O dicho en español (Laboratorio lingüístico de análisis de llamadas),
@@ -42,19 +32,20 @@
   <div class="container-flex justify-content-center">
     <h3 class="d-flex align-items-start flex-column headerUso">¿Cómo usar?</h3>
     <div class="col-lg-12 d-flex flex-column justify-content-center h600">
+<<<<<<< Updated upstream
       <iframe class="sizevideo" src="https://www.youtube.com/embed/CiaT0VR0qbo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+=======
+      <iframe class="sizevideo" src="https://www.youtube.com/embed/mkggXE5e2yk" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+>>>>>>> Stashed changes
     </div>
   </div>
 </section>
 <section class="d-flex flex-column bd-highlight mb-3 align-items-center">
-  <div
-    class="d-flex flex-column bd-highlight mb-3 align-items-center tarjeta_subir_audios"
-  >
+  <div class="d-flex flex-column bd-highlight mb-3 align-items-center tarjeta_subir_audios">
     <div class="">
-      <button
-        onclick="document.getElementById('audio-input').click();"
-        class="btn btn-primary uploadButton"
-      >
+      <button onclick="document.getElementById('audio-input').click();" class="btn btn-primary uploadButton">
         <i style="font-size: 25px" class="fa fa-upload" aria-hidden="true"></i>
         Sube uno o más audios (.wav)
       </button>
@@ -62,30 +53,15 @@
       <div class="alert alert-success" role="alert">{{ message }}</div>
       {% endfor %} {% endif %}
     </div>
-    <form
-      class="d-flex flex-column bd-highlight mb-3 align-items-center tarjeta_subir_audios"
-      enctype="multipart/form-data"
-      method="post"
-      action=""
-    >
+    <form class="d-flex flex-column bd-highlight mb-3 align-items-center tarjeta_subir_audios"
+      enctype="multipart/form-data" method="post" action="">
       {% csrf_token %}
-      <input
-        type="file"
-        id="audio-input"
-        accept="audio/wav"
-        style="display: none"
-        multiple
-        name="files"
-      />
+      <input type="file" id="audio-input" accept="audio/wav" style="display: none" multiple name="files" />
       <div class="preview">
         <p>Tus archivos de audio se mostrarán aquí</p>
       </div>
       <div class="">
-        <button
-          class="btn btn-success analyzeButton"
-          id="bsubir-audio"
-          type="submit"
-        >
+        <button class="btn btn-success analyzeButton" id="bsubir-audio" type="submit">
           Comenzar Análisis
         </button>
       </div>
@@ -104,24 +80,16 @@
       <div class="row col-lg-12 d-flex justify-content-center">
         <div class="col-lg-12 containerfile d-flex flex-column">
           <div class="row bordertrl">
-            <div
-              class="col-2 rb d-flex justify-content-center align-items-center"
-            >
+            <div class="col-2 rb d-flex justify-content-center align-items-center">
               <p class="wm">Nombre</p>
             </div>
-            <div
-            class="col-2 rb d-flex justify-content-center align-items-center"
-          >
-            <p class="wm">Estado</p>
-          </div>
-            <div
-              class="col-2 rb d-flex justify-content-center align-items-center"
-            >
+            <div class="col-2 rb d-flex justify-content-center align-items-center">
+              <p class="wm">Estado</p>
+            </div>
+            <div class="col-2 rb d-flex justify-content-center align-items-center">
               <p class="wm">Motivo</p>
             </div>
-            <div
-              class="col-3 rb d-flex justify-content-center align-items-center"
-            >
+            <div class="col-3 rb d-flex justify-content-center align-items-center">
               <p class="wm">Descargar como pdf</p>
             </div>
             <div class="col-3 d-flex justify-content-center align-items-center">
@@ -140,7 +108,7 @@
               <p class="wm f11 font hidetext">Robo de tarjeta</p>
             </div>
             <div class="col-3 d-flex justify-content-center align-items-center">
-              <button onclick="pdf(this.id)"  id="{{name}}"type="button" class="btn btn-warning fbutton" disabled>
+              <button onclick="pdf(this.id)" id="{{name}}" type="button" class="btn btn-warning fbutton" disabled>
                 Descargar pdf
               </button>
             </div>
@@ -160,14 +128,18 @@
 <section>
   <div class="d-flex justify-content-center mb-3">
     <div class="row col-lg-10 d-flex justify-content-center fondo">
+<<<<<<< Updated upstream
       <iframe src="{% static 'CALL/img/report.pdf' %}"
         class="sizeweb" title="Dashboard">
+=======
+      <iframe src="{% static 'CALL/img/report.pdf' %}" class="sizeweb" title="Dashboard">
+>>>>>>> Stashed changes
       </iframe>
     </div>
   </div>
 </section>
 <div style="display: none;">
-<p id="url"></p>
-<p></p>
+  <p id="url"></p>
+  <p></p>
 </div>
 {% endblock %}
